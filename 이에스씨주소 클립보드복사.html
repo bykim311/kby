@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Copy to Clipboard</title>
+    <script>
+        function copyToClipboard() {
+            const text = "안양시 동안구 엘에스로 116번길 25-32, 901호 (SK V1센터 1차)"; // 여기에 복사할 텍스트 입력
+            navigator.clipboard.writeText(text).then(() => {
+                alert("텍스트가 클립보드에 복사되었습니다!");
+            }).catch(err => {
+                console.error("텍스트 복사 실패: ", err);
+            });
+        }
+    </script>
+</head>
+<body onload="copyToClipboard()">
+    <h1>텍스트가 클립보드에 복사되었습니다!</h1>
+</body>
+</html>
